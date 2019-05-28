@@ -1,0 +1,88 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Reference-ResearchStudy",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2018-07-31T13:46:42.941+00:00"
+  },
+  "extension": [
+    {
+      "url": "http://clinfhir.com/fhir/StructureDefinition/cfAuthor",
+      "valueBoolean": true
+    },
+    {
+      "url": "http://clinfhir.com/StructureDefinition/userEmail",
+      "valueString": "romano_angela_d@lilly.com"
+    }
+  ],
+  "url": "https://fhirtest.uhn.ca/baseDstu3/StructureDefinition/Reference-ResearchStudy",
+  "name": "Reference-ResearchStudy",
+  "status": "draft",
+  "description": "Add a ResearchStudy reference to a resource",
+  "kind": "complex-type",
+  "abstract": false,
+  "contextType": "resource",
+  "context": [
+    "*"
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "snapshot": {
+    "element": [
+      {
+        "id": "Extension0",
+        "path": "Extension",
+        "label": "Reference0",
+        "definition": "No Description",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Extension.url0",
+        "path": "Extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "label": "Reference0",
+        "definition": "No Description",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "Reference0"
+      },
+      {
+        "id": "Extension.value[x]0",
+        "path": "Extension.valueReference",
+        "label": "Reference0",
+        "definition": "No Description",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.valueReference",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference"
+          }
+        ]
+      }
+    ]
+  }
+}
